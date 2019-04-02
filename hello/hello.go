@@ -4,9 +4,11 @@ import (
 	"fmt"
 )
 
+const prefix = "Hello, "
+
 // Hello returns "Hello, world"
 func Hello(name string) string {
-	return "Hello, " + name
+	return prefix + name
 }
 
 func main() {
