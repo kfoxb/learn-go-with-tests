@@ -3,9 +3,15 @@ package iteration
 import "testing"
 
 func TestRepeated(t *testing.T) {
-	actual := Repeated("j")
+	actual := Repeat("j")
 	expected := "jjjjj"
 	if actual != expected {
 		t.Errorf("expected '%s' but received '%s'", expected, actual)
+	}
+}
+
+func BenchmarkRepeat(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		Repeat("j")
 	}
 }
